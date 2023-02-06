@@ -1,0 +1,28 @@
+.imageBackground
+    position: relative
+    width: 100%
+    height: 100%
+
+.darker
+    z-index: 1
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: black
+    opacity: 0.2
+
+.img
+    transition: opacity .3s ease
+    opacity: 0
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.active
+    opacity: 1
+    visibility: visible

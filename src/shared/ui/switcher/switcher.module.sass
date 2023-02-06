@@ -1,0 +1,40 @@
+.switcher
+    color: var(--text-light)
+    width: fit-content
+    gap: 10rem
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 10rem
+    background: rgba(255, 255, 255, .3)
+    height: 35rem
+    border-radius: 50rem
+
+.icon
+    width: 70%
+    height: 70%
+
+.point
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .3s all
+    cursor: pointer
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    position: absolute
+    height: 50rem
+    width: 50rem
+    background-color: var(--white)
+    border-radius: 50%
+    &_active
+        left: calc(100% - 50rem)
+
+.text
+    font: var(--font-regular-s)
+    pointer-events: none
+    transition: 0.3s opacity
+    &_hidden
+        opacity: 0

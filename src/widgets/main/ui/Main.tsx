@@ -1,15 +1,15 @@
 import s from "./main.module.sass"
 
-import {FC, useState} from "react"
+import {FC, useCallback, useState} from "react"
 
 import {classNames, ImageBackground} from "shared"
-import back from "./assets/back.webp"
-import backWinter from "./assets/back-winter.webp"
+import back from "../assets/back.webp"
+import backWinter from "../assets/back-winter.webp"
 
-import winter from "./assets/icons/winter.svg"
-import summer from "./assets/icons/summer.svg"
+import winter from "../assets/icons/winter.svg"
+import summer from "../assets/icons/summer.svg"
 
-import {Switcher} from "shared/ui/switcher/Switcher"
+import {MainHeader} from "entities"
 
 interface MainProps {
     className?: string
@@ -23,20 +23,27 @@ const right = {text: "Лето", img: summer}
 export const Main: FC<MainProps> = (props) => {
 	const {className = ""} = props
 
-	const [image, setImage] = useState(0)
+	const [active, setActive] = useState(0)
 
-	const toggleTheme = () => {
-		if (image + 1 < images.length) {
-			setImage(image => image += 1)
+	const toggleTheme = useCallback(() => {
+		if (active + 1 < images.length) {
+			setActive(image => image += 1)
 		} else {
-			setImage(0)
+			setActive(0)
 		}
-	}
+	}, [active])
 
 	return (
 		<div className = {classNames(s.main, {}, [className])}>
-			<ImageBackground className={s.background} active={image} images={images}/>
-			<Switcher onClick={toggleTheme} left={left} right={right}/>
+			<MainHeader left={left} right={right} toggleTheme={toggleTheme}/>
+			<ImageBackground className={s.background} active={active} images={images}/>
+			<div className={s.title}>
+				Гостевой комплекс Карелия Медвежка — это одно из лучших мест для семейного отдыха.
+			</div>
+			<div className={s.subtitle}>
+				Широкий номерной фонд позволит выбрать подходящий вариант как для большой компании, так и уютный коттедж для семейной пары с детьми.
+			</div>
+			<div className={s.filter}/>
 		</div>
 	)
 }

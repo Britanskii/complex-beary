@@ -3,11 +3,9 @@ import s from "./mainHeader.module.sass"
 import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
-
-import logo from "../../../shared/assets/logo.webp"
 import {Switcher} from "shared/ui/switcher/Switcher"
-import {Navigation} from "widgets"
-import {Address, Number} from "entities"
+import {HeaderTop} from "entities"
+import {HeaderType} from "entities/headerTop/HeaderTop"
 
 interface MainHeaderProps {
     className?: string
@@ -20,13 +18,8 @@ export const MainHeader: FC<MainHeaderProps> = (props) => {
 	const {className = "", toggleTheme, left, right} = props
 
 	return (
-		<div className = {classNames(s.mainHeader, {}, [className])}>
-			<div className={s.flex}>
-				<img className={s.logo} src={logo} alt="logo"/>
-				<Address />
-				<Number/>
-				<Navigation/>
-			</div>
+		<div className = {classNames([s.mainHeader, className])}>
+			<HeaderTop/>
 			<div className={s.flex}>
 				<Switcher onClick={toggleTheme} left={left} right={right}/>
 				<span className={s.money}>

@@ -20,7 +20,7 @@ export const InfoWithIcon: FC<InfoWithIconProps> = (props) => {
 	const {className = "", icon, text, type = IconType.LIGHT} = props
 
 	return (
-		<div className={classNames(s.infoWithIcon, {}, [s[type], className])}>
+		<div className={classNames([s.infoWithIcon, s[type], className])}>
 			<img className={s.icon} src={icon}/>
 			{text.map((line) =>
 				<>{line} <br/></>

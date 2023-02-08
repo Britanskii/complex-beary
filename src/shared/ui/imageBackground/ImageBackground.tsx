@@ -14,12 +14,12 @@ export const ImageBackground: FC<ImageBackgroundProps> = (props) => {
 	const {className = "", images, active} = props
 
 	return (
-		<div className={classNames(s.imageBackground, {}, [className])}>
+		<div className={classNames([s.imageBackground, className])}>
 			<div className={s.darker}/>
 			{images.map((image, index) =>
 				<img key={image}
-				     className={classNames(s.img, {[s.active]: active === index})}
-				     src={image}/>
+					className={classNames([s.img ], {[s.active]: active === index})}
+					src={image}/>
 			)}
 		</div>
 	)

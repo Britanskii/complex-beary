@@ -14,7 +14,7 @@ export const Cottages: FC<CottagesProps> = (props) => {
 	const {className = ""} = props
 
 	return (
-		<div className = {classNames(s.cottages, {}, [className])}>
+		<div className = {classNames([s.cottages, className])}>
 			<Menu/>
 			<Main/>
 		</div>

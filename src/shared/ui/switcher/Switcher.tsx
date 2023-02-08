@@ -24,15 +24,15 @@ export const Switcher: FC<SwitcherProps> = (props) => {
 	}
 
 	return (
-		<div onClick={onSwitch} className = {classNames(s.switcher, {}, [className])}>
-			<div className={classNames(s.point, {[s.point_active]: active}, [])}>
+		<div onClick={onSwitch} className = {classNames([s.switcher, className])}>
+			<div className={classNames([s.point], {[s.point_active]: active})}>
 				{active
 					? <img className={s.icon} src={left.img} alt=""/>
 					: <img className={s.icon} src={right.img} alt=""/>
 				}
 			</div>
-			<div className={classNames(s.text, {[s.text_hidden]: !active})}>{left.text}</div>
-			<div className={classNames(s.text, {[s.text_hidden]: active})}>{right.text}</div>
+			<div className={classNames([s.text], {[s.text_hidden]: !active})}>{left.text}</div>
+			<div className={classNames([s.text], {[s.text_hidden]: active})}>{right.text}</div>
 		</div>
 	)
 }

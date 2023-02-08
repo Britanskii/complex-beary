@@ -13,7 +13,7 @@ export const Button: FC<ButtonProps> = (props) => {
 	const {className = "", text="Button"} = props
 
 	return (
-		<button type={"button"} className = {classNames(s.button, {}, [className])}>
+		<button type={"button"} className = {classNames([s.button, className])}>
 			{text}
 		</button>
 	)

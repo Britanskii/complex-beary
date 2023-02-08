@@ -21,9 +21,8 @@ export const Menu: FC<MenuProps> = (props) => {
 
 	const {className = ""} = props
 
-
 	return (
-		<div className = {classNames(s.menu, {[s.open]: open}, [className])}>
+		<div className = {classNames([s.menu, className], {[s.open]: open})}>
 			<div className={s.links}>
 				<a href="/">
 					<img className={s.logo} src={logo}/>

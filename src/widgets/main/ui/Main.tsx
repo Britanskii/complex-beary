@@ -34,7 +34,7 @@ export const Main: FC<MainProps> = (props) => {
 	}, [active])
 
 	return (
-		<div className = {classNames(s.main, {}, [className])}>
+		<div className = {classNames([s.main, className])}>
 			<MainHeader left={left} right={right} toggleTheme={toggleTheme}/>
 			<ImageBackground className={s.background} active={active} images={images}/>
 			<div className={s.title}>

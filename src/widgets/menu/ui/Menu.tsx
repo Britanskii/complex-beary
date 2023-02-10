@@ -9,7 +9,7 @@ import youtube from "shared/assets/icons/youtube.svg"
 import vkontakte from "shared/assets/icons/vkontakte.svg"
 import logo from "shared/assets/logo.webp"
 import close from "shared/assets/icons/close.svg"
-import {Address, Number} from "entities"
+import {Address, Number, Socials} from "entities"
 import {Button, IconType, useNavigation} from "shared"
 
 interface MenuProps {
@@ -50,17 +50,7 @@ export const Menu: FC<MenuProps> = (props) => {
 			</div>
 			<span className={s.line}/>
 			<div className={s.info}>
-				<div className={s.social}>
-					<a className={s.icon}  href="https://www.youtube.com/channel/UCO1kETIbHgYJsykWefRNe-g">
-						<img src={youtube}/>
-					</a>
-					<a className={s.icon} href="https://t.me/karelia_medvezhka">
-						<img src={telegram}/>
-					</a>
-					<a className={s.icon} href="https://vk.com/karelia_medvezhka">
-						<img src={vkontakte}/>
-					</a>
-				</div>
+				<Socials/>
 				<Address type={IconType.DARK}/>
 				<Number type={IconType.DARK}/>
 				<Button text={"Бронировать"} />

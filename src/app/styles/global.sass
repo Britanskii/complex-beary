@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Montserrat:wght@300;400;600&display=swap")
 
 \:root
-    font-size: .052vw
+    font-size: 1px
 
     --font-family-title: 'Kelly Slab', cursive
     --font-family-text: 'Montserrat', sans-serif
@@ -10,6 +10,7 @@
     --font-size-s: 20rem
     --font-size-sm: 25rem
     --font-size-m: 30rem
+    --font-size-sb-2: 35rem
     --font-size-sb: 40rem
     --font-size-b: 50rem
     --font-size-l: 60rem
@@ -22,6 +23,7 @@
     --font-regular-sm: var(--font-size-sm) var(--font-family-text)
     --font-regular-m: var(--font-size-m) var(--font-family-text)
     --font-regular-sb: var(--font-size-sb) var(--font-family-text)
+    --font-regular-sb-2: var(--font-size-sb-2) var(--font-family-text)
 
     --accent: #E8BB92
     --background: #E7E9FB
@@ -30,6 +32,10 @@
 
     --white: #ffffff
     --black: #000000
+
+@media (max-width: 1440px)
+    \:root
+        font-size: .07vw
 
 body
     background-color: var(--background)

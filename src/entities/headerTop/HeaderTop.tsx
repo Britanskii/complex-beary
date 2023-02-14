@@ -8,6 +8,7 @@ import logoWithout from "shared/assets/logo-without.webp"
 import {Address, Number} from "entities"
 import {Navigation} from "features/navigation/ui/Navigation"
 import {IconType} from "shared"
+import {Link} from "react-router-dom"
 
 export const enum HeaderType {
 	DARK = "DARK",
@@ -26,7 +27,7 @@ export const HeaderTop: FC<HeaderTopProps> = (props) => {
 
 	return (
 		<div className={classNames([s.headerTop, s[type],className])}>
-			<img className={s.logo} src={type === "DARK" ? logoWithout : logo} alt="logo"/>
+			<Link to={"/"}><img className={s.logo} src={type === "DARK" ? logoWithout : logo} alt="logo"/></Link>
 			<Address type={isDark}/>
 			<Number type={isDark}/>
 			<Navigation type={isDark}/>

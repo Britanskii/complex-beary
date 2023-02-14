@@ -1,3 +1,4 @@
+export {useScrollToTop} from "shared/lib/useScrollToTop"
 export {classNames} from "./lib/classNames/classNames"
 export {ImageBackground} from "./ui/imageBackground/ImageBackground"
 export {InfoWithIcon, IconType} from "./ui/infoWithIcon/InfoWithIcon"

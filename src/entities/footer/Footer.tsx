@@ -6,6 +6,7 @@ import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
 import {Socials} from "entities"
+import {Link} from "react-router-dom"
 
 interface FooterProps {
 	className?: string
@@ -17,15 +18,19 @@ export const Footer: FC<FooterProps> = (props) => {
 	return (
 		<div className={classNames([s.footer, className])}>
 			<div className={s.top}>
-				<img className={s.logo} src={logo}/>
+				<Link to={"/"}>
+					<img className={s.logo} src={logo}/>
+				</Link>
 				<ul className={s.links}>
-					<li className={s.link}>
-						Политика конфиденциальности
+					<li className={s.item}>
+						<Link className={s.link} to={"/policy"}>
+							Политика конфиденциальности
+						</Link>
 					</li>
-					<li  className={s.link}>
+					<li className={s.item}>
 						+7 (921) 220-20-13
 					</li>
-					<li className={s.link}>
+					<li className={s.item}>
 						8 (800) 201-29-03 (бесплатно)
 					</li>
 					<Socials/>

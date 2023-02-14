@@ -3,11 +3,11 @@ import s from "./main.module.sass"
 import {FC, useCallback, useState} from "react"
 
 import {classNames, ImageBackground} from "shared"
-import back from "../assets/back.webp"
-import backWinter from "../assets/back-winter.webp"
+import back from "../../assets/back.webp"
+import backWinter from "../../assets/back-winter.webp"
 
-import winter from "../assets/icons/winter.svg"
-import summer from "../assets/icons/summer.svg"
+import winter from "../../assets/icons/winter.svg"
+import summer from "../../assets/icons/summer.svg"
 
 import {MainHeader} from "entities"
 

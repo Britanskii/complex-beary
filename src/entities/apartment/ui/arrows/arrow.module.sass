@@ -1,0 +1,26 @@
+.arrow
+    transition: .3s opacity ease
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+    top: 50%
+    transform: translateY(-50%)
+    position: absolute
+    background-color: var(--accent)
+    height: 60rem
+    width: 60rem
+    cursor: pointer
+    border-radius: 50%
+    &:hover
+        opacity: .7
+.left
+    left: 20rem
+    & > .icon
+        transform: scale(-1, 1)
+
+.right
+    right: 20rem
+
+.icon
+    width: 40%

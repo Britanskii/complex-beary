@@ -8,33 +8,40 @@ import {Button} from "shared"
 import {Link} from "react-router-dom"
 import {Slider} from "shared/ui/slider/ui/Slider"
 
+export enum ApartmentType {
+	APARTMENT = "apartments",
+	COTTAGE = "cottages"
+}
+
 interface ApartmentProps {
 	className?: string
+	name: string,
+	description: string,
+	price: string
+	id: number,
+	images: string[],
+	type: ApartmentType
 }
 
 export const Apartment: FC<ApartmentProps> = (props) => {
-	const {className = ""} = props
+	const {className = "", name, description, images, price, id, type} = props
 
 	return (
 		<div className={classNames([s.apartment, className])}>
-			<Slider/>
+			<Slider images={images}/>
 			<div className={s.main}>
-				<div className={s.title}>Алёша Попович</div>
+				<div className={s.title}>{name}</div>
 				<div className={s.description}>
-					Вместимость до 4-х человек.
-					Камин, гостиная совмещенная
-					с кухней со всем необходимым для приготовления пищи, холодильник, балкон-терраса.
-					ЖК телевизор, душевая кабина, стиральная машина.
-					До озера 120 м.
-					<Link to={"/1"} className={s.more}>
+					{description}
+					<Link to={`/${type}/${id}`} className={s.more}>
 						Подробнее
 						<div className={s.arrow}/>
 					</Link>
 					<div className={s.line}/>
 				</div>
 				<div className={s.bottom}>
-					<div className={s.price}>От 5000р <br/> за ночь</div>
-					<Link to={"/1"}>
+					<div className={s.price}>От {price}р <br/> за ночь</div>
+					<Link to={`/${type}/${id}`}>
 						<Button text={"Бронировать"}/>
 					</Link>
 				</div>

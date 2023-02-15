@@ -4,24 +4,26 @@ import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
 import {Wrapper} from "widgets"
-import {Apartment} from "entities/apartment/ui/Apartment"
+import {Apartment, ApartmentType} from "entities/apartment/ui/Apartment"
+import {House} from "shared"
 
 interface CottagesProps {
 	title: string
     className?: string
+	list: House[]
+	type: ApartmentType
 }
 
 export const CottagesList: FC<CottagesProps> = (props) => {
-	const {className = "", title = ""} = props
+	const {className = "", title = "", list, type} = props
 
 	return (
 		<Wrapper className = {classNames([s.cottagesList, className])}>
 			<div className={s.title}>{title}</div>
 			<div className={s.list}>
-				<Apartment/>
-				<Apartment/>
-				<Apartment/>
-				<Apartment/>
+				{list.map(({name, id, description, images, price}) =>
+					<Apartment type={type} key={id} price={price} name={name} id={id} description={description} images={images} />
+				)}
 			</div>
 		</Wrapper>
 	)

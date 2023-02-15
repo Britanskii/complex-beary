@@ -1,13 +1,17 @@
 import "./index.sass"
-import {classNames, useScrollToTop} from "shared"
+import {classNames, COTTAGES, useScrollToTop} from "shared"
 import {Cottages, Policy, Wrapper} from "pages"
-import { Route, Routes} from "react-router-dom"
+import {Route, Routes} from "react-router-dom"
 import {CottagesList} from "widgets"
 import {House} from "pages/house/ui/House"
+import {ApartmentType} from "entities/apartment/ui/Apartment"
 
 
 const App = () => {
 	useScrollToTop()
+
+	const cottages = COTTAGES.filter(({type}) => type !== ApartmentType.APARTMENT)
+	const apartments = COTTAGES.filter(({type}) => type !== ApartmentType.COTTAGE)
 
 	return (
 		<div className={classNames(["app"])}>
@@ -15,21 +19,24 @@ const App = () => {
 				<Route path={"/"} element={
 					<>
 						<Cottages/>
-						<CottagesList title={"Коттеджи"}/>
+						<CottagesList type={ApartmentType.COTTAGE} list={COTTAGES} title={"Коттеджи"}/>
 					</>
 				}/>
 				<Route path={"/cottages"} element={
-					<CottagesList title={"Коттеджи"}/>
+					<CottagesList type={ApartmentType.COTTAGE} list={cottages} title={"Коттеджи"}/>
 				}/>
 				<Route path={"/apartments"} element={
-					<CottagesList title={"Апартаменты"}/>
+					<CottagesList type={ApartmentType.APARTMENT} list={apartments} title={"Апартаменты"}/>
 				}/>
 				<Route path={"/policy"} element={
 					<Wrapper>
 						<Policy/>
 					</Wrapper>
 				}/>
-				<Route path={"/1"} element={
+				<Route path={"/cottages/:id"} element={
+					<House/>
+				}/>
+				<Route path={"/apartments/:id"} element={
 					<House/>
 				}/>
 				<Route path={"*"} element={

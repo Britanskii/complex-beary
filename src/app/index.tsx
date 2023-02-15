@@ -3,6 +3,8 @@ import {classNames, useScrollToTop} from "shared"
 import {Cottages, Policy, Wrapper} from "pages"
 import { Route, Routes} from "react-router-dom"
 import {CottagesList} from "widgets"
+import {House} from "pages/house/ui/House"
+
 
 const App = () => {
 	useScrollToTop()
@@ -26,6 +28,9 @@ const App = () => {
 					<Wrapper>
 						<Policy/>
 					</Wrapper>
+				}/>
+				<Route path={"/1"} element={
+					<House/>
 				}/>
 				<Route path={"*"} element={
 					<Wrapper>

@@ -3,6 +3,7 @@ import s from "./policy.module.sass"
 import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
+import { Wrapper } from "widgets"
 
 interface PolicyProps {
     className?: string
@@ -12,7 +13,7 @@ export const Policy: FC<PolicyProps> = (props) => {
 	const {className = ""} = props
 
 	return (
-		<div className = {classNames([s.policy, className])}>
+		<Wrapper className = {classNames([s.policy, className])}>
 			<h2 className={s.title}>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>
 			<p>
                 (Положение об обработке и защите персональных данных) <br/>
@@ -138,6 +139,6 @@ export const Policy: FC<PolicyProps> = (props) => {
                 р/с
                 к/с
 			</p>
-		</div>
+		</Wrapper>
 	)
 }

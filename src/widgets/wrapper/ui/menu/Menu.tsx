@@ -22,19 +22,19 @@ export const Menu: FC<MenuProps> = (props) => {
 	return (
 		<div className = {classNames([s.menu, className], {[s.open]: open})}>
 			<div className={s.links}>
-				<a href="/Users/ohink/IdeaProjects/complex-beary/src/pages">
+				<Link to={"/"}>
 					<img className={s.logo} src={logo}/>
-				</a>
+				</Link>
 				<ul className={s.column}>
 					<li className={s.row}>Размещение</li>
 					<li onClick={onClose} className={s.row}><Link to={"/cottages"}>Коттеджи</Link></li>
 					<li onClick={onClose} className={s.row}><Link to={"/apartments"}>Апартаменты</Link></li>
 				</ul>
 				<ul className={s.column}>
-					<li className={s.row}>Досуг</li>
+					<li onClick={onClose} className={s.row}><Link to={"/promotions/leisure"}>Досуг</Link></li>
 				</ul>
 				<ul className={s.column}>
-					<li className={s.row}>Акции</li>
+					<li onClick={onClose} className={s.row}><Link to={"/promotions"}>Акции</Link></li>
 				</ul>
 				<ul className={s.column}>
 					<li className={s.row}>Вопрос/ответ</li>

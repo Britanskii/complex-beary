@@ -5,6 +5,8 @@ import {Route, Routes} from "react-router-dom"
 import {CottagesList} from "widgets"
 import {House} from "pages/house/ui/House"
 import {ApartmentType} from "entities/apartment/ui/Apartment"
+import {Promotions} from "pages/promotions/ui/Promotions"
+import {Leisure} from "pages/leisure/ui/Leisure"
 
 
 const App = () => {
@@ -29,9 +31,7 @@ const App = () => {
 					<CottagesList type={ApartmentType.APARTMENT} list={apartments} title={"Апартаменты"}/>
 				}/>
 				<Route path={"/policy"} element={
-					<Wrapper>
-						<Policy/>
-					</Wrapper>
+					<Policy/>
 				}/>
 				<Route path={"/cottages/:id"} element={
 					<House/>
@@ -39,6 +39,14 @@ const App = () => {
 				<Route path={"/apartments/:id"} element={
 					<House/>
 				}/>
+				<Route path={"/promotions"} element={
+					<Promotions/>
+				}>
+				</Route>
+				<Route path={"/promotions/leisure"} element={
+					<Leisure/>
+				}>
+				</Route>
 				<Route path={"*"} element={
 					<Wrapper>
 						<h1>Такая страница не найдена</h1>

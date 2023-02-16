@@ -6,7 +6,7 @@ import {classNames} from "shared/lib/classNames/classNames"
 import {Footer, HeaderTop} from "entities"
 import {HeaderType} from "entities/headerTop/HeaderTop"
 import {Menu} from "./menu/Menu"
-import { NavLink } from "react-router-dom"
+import {NavLink, useLocation} from "react-router-dom"
 
 interface MainProps {
     className?: string
@@ -20,6 +20,11 @@ export const Wrapper: FC<MainProps> = (props) => {
 		return link.isActive ? s.active : ""
 	}
 
+	const location = useLocation()
+
+	const isPromotions = location.pathname.includes("promotions")
+	const isLeisure = location.pathname.includes("leisure")
+
 	return (
 		<>
 			<Menu/>
@@ -30,6 +35,17 @@ export const Wrapper: FC<MainProps> = (props) => {
 					<NavLink to={"/"}>Главная</NavLink> /
 					<NavLink className={activeClass} to={"/cottages"}>коттеджи</NavLink> /
 					<NavLink className={activeClass} to={"/apartments"}>апартаменты</NavLink>
+					{isPromotions &&
+                        <>
+                            /<NavLink className={!isLeisure ? activeClass : ""} to={"/promotions"}>акции</NavLink>
+                        </>
+					}
+					{
+						isLeisure &&
+						<>
+                            /<NavLink className={activeClass} to={"/promotions/leisure"}>досуг</NavLink>
+						</>
+					}
 				</div>
 				<main className={className}>
 					{children}

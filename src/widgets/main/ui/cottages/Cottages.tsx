@@ -18,7 +18,7 @@ export const Cottages: FC<CottagesProps> = (props) => {
 			setScrollPermitted(true)
 		}
 
-		const preventScroll = (event: WheelEvent) => {
+		const preventScroll = (event: WheelEvent | TouchEvent) => {
 			if (!scrollPermitted) {
 				event.preventDefault()
 				setOpen(false)
@@ -26,10 +26,16 @@ export const Cottages: FC<CottagesProps> = (props) => {
 			}
 		}
 
+		const handleTouchMove = (event: TouchEvent) => {
+			preventScroll(event)
+		}
+
 		document.addEventListener("wheel", preventScroll, { passive: false })
+		document.addEventListener("touchmove", handleTouchMove, { passive: false })
 
 		return () => {
 			document.removeEventListener("wheel", preventScroll)
+			document.removeEventListener("touchmove", handleTouchMove)
 		}
 	}, [scrollPermitted])
 

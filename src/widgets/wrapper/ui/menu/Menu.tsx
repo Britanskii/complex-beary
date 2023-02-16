@@ -37,12 +37,12 @@ export const Menu: FC<MenuProps> = (props) => {
 					<li onClick={onClose} className={s.row}><Link to={"/promotions"}>Акции</Link></li>
 				</ul>
 				<ul className={s.column}>
-					<li className={s.row}>Вопрос/ответ</li>
+					<li onClick={onClose} className={s.row}><Link to={"/promotions/leisure/questions"}>Вопрос/ответ</Link></li>
 				</ul>
 				<ul className={s.column}>
-					<li className={s.row}>Контакты</li>
-					<li className={s.row}>Карта</li>
-					<li className={s.row}>Как добраться</li>
+					<li onClick={onClose} className={s.row}><Link to={"/promotions/leisure/questions/contacts"}>Контакты</Link></li>
+					<li onClick={onClose} className={s.row}><Link to={"/promotions/leisure/questions/contacts"}>Карта</Link></li>
+					<li onClick={onClose} className={s.row}><Link to={"/promotions/leisure/questions/contacts"}>Как добраться</Link></li>
 				</ul>
 				<img onClick={onClose} src={close} className={s.close}/>
 			</div>
@@ -56,3 +56,5 @@ export const Menu: FC<MenuProps> = (props) => {
 		</div>
 	)
 }
+
+

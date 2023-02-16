@@ -5,6 +5,7 @@ import {FC, useRef} from "react"
 import {classNames} from "shared/lib/classNames/classNames"
 import {Arrow} from "entities/apartment/ui/arrows/Arrow"
 import {default as SlickSlider}  from "react-slick"
+import {LazyImage} from "shared/lazyImage/ui/LazyImage"
 
 export enum SliderVariants {
 	DEFAULT = "default",
@@ -58,7 +59,7 @@ export const Slider: FC<SliderProps> = (props) => {
 			<Arrow onClick={onNextRight} left={true}/>
 			<SlickSlider ref={refSlider} className={s.slick} {...settings} {...props.settings}>
 				{images.map((src) =>
-					<img className={s.image} key={src} src={src}/>
+					<LazyImage className={s.image} key={src} src={src}/>
 				)}
 			</SlickSlider>
 			<Arrow onClick={onNextLeft} left={false}/>

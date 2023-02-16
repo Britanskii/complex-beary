@@ -7,6 +7,8 @@ import {House} from "pages/house/ui/House"
 import {ApartmentType} from "entities/apartment/ui/Apartment"
 import {Promotions} from "pages/promotions/ui/Promotions"
 import {Leisure} from "pages/leisure/ui/Leisure"
+import {Questions} from "pages/questions/ui/Questions"
+import {Contacts} from "pages/contacts/ui/Contacts"
 
 
 const App = () => {
@@ -45,6 +47,14 @@ const App = () => {
 				</Route>
 				<Route path={"/promotions/leisure"} element={
 					<Leisure/>
+				}>
+				</Route>
+				<Route path={"/promotions/leisure/questions"} element={
+					<Questions/>
+				}>
+				</Route>
+				<Route path={"/promotions/leisure/questions/contacts"} element={
+					<Contacts/>
 				}>
 				</Route>
 				<Route path={"*"} element={

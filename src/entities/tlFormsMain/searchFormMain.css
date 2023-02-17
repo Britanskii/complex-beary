@@ -1,10 +1,11 @@
 #block-search, #block-search * {
     box-sizing: border-box;
 }
-#block-search {
-    background-color: #E8BB91;
+#block-search-main {
+    background: rgba(45, 45, 45, 0.15);
+    border: 1px solid #FFFFFF;
     width: 100%;
-    max-width: 1180px;
+    max-width: 1236px;
     margin: 0 auto;
 }
 .tl-container {

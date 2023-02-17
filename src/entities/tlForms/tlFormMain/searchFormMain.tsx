@@ -5,7 +5,7 @@ export const SearchFormMain = () => {
 
 	const loadSearchForm = (w: any) => {
 		var q = [
-			['setContext', 'TL-INT-medvegka_2023-02-16', 'ru'],
+			['setContext', 'TL-INT-medvegka_2023-02-16.main', 'ru'],
 			['embed', 'search-form', {
 				container: 'tl-search-form'
 			}]

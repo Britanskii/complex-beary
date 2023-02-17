@@ -9,6 +9,7 @@ import close from "shared/assets/icons/close.svg"
 import {Address, Number, Socials} from "entities"
 import {Button, IconType, useNavigation} from "shared"
 import {Link} from "react-router-dom"
+import {ButtonTL} from "shared/ui/buttonTL/Button";
 
 interface MenuProps {
     className?: string
@@ -51,7 +52,7 @@ export const Menu: FC<MenuProps> = (props) => {
 				<Socials/>
 				<Address type={IconType.DARK}/>
 				<Number type={IconType.DARK}/>
-				<Button text={"Бронировать"} />
+				<ButtonTL text={"Бронировать"} />
 			</div>
 		</div>
 	)

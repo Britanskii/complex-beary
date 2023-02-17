@@ -12,6 +12,7 @@ import {ImagesList} from "pages/house/ui/imagesList/ImagesList"
 import { useNavigate, useParams} from "react-router-dom"
 
 import {COTTAGES} from "shared"
+import {ButtonTL} from "shared/ui/buttonTL/Button";
 
 interface HouseProps {
     className?: string
@@ -41,7 +42,7 @@ export const House: FC<HouseProps> = (props) => {
 				<Slider images={images} variant={SliderVariants.CLEAR} settings={{dots: false}}/>
 				<div className={s.info}>
 					{description}
-					<Button className={s.book} text={"Бронировать"}/>
+					<ButtonTL className={s.book} text={"Бронировать"}/>
 				</div>
 			</div>
 			<ImagesList className={s.list} images={images}/>

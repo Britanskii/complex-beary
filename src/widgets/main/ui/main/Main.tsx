@@ -45,7 +45,7 @@ export const Main: FC<MainProps> = (props) => {
 			<div className={s.subtitle}>
 				Широкий номерной фонд позволит выбрать подходящий вариант как для большой компании, так и уютный коттедж для семейной пары с детьми.
 			</div>
-			<div className={s.filter}>
+			<div className={s.filter_}>
 				<SearchFormMain/>
 			</div>
 		</div>

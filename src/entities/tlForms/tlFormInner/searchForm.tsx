@@ -1,7 +1,7 @@
 import React from "react";
-import "./searchFormMain.css";
+import "./searchForm.css";
 
-export const SearchFormMain = () => {
+export const SearchForm = () => {
 
 	const loadSearchForm = (w: any) => {
 		var q = [

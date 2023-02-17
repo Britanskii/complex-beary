@@ -45,9 +45,9 @@ export const Apartment: FC<ApartmentProps> = (props) => {
 					<a href='#' data-tl-booking-open='true' data-tl-room={roomType}>
 						<Button text={"Бронировать"}/>
 					</a>
-					<Link to={`/${type}/${id}`}>
-						<Button text={"Бронировать"}/>
-					</Link>
+					{/*<Link to={`/${type}/${id}`}>*/}
+					{/*	<Button text={"Бронировать"}/>*/}
+					{/*</Link>*/}
 				</div>
 			</div>
 		</div>

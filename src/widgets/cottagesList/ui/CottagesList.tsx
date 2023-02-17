@@ -17,12 +17,13 @@ interface CottagesProps {
 export const CottagesList: FC<CottagesProps> = (props) => {
 	const {className = "", title = "", list, type} = props
 
+	let roomType;
 	return (
 		<Wrapper className = {classNames([s.cottagesList, className])}>
 			<div className={s.title}>{title}</div>
 			<div className={s.list}>
 				{list.map(({name, id, description, images, price}) =>
-					<Apartment type={type} key={id} price={price} name={name} id={id} description={description} images={images} />
+					<Apartment type={type} key={id} price={price} name={name} id={id} description={description} roomType={roomType} images={images} />
 				)}
 			</div>
 		</Wrapper>

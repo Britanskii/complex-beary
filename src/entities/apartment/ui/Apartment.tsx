@@ -17,14 +17,15 @@ interface ApartmentProps {
 	className?: string
 	name: string,
 	description: string,
-	price: string
+	price: string,
 	id: number,
 	images: string[],
-	type: ApartmentType
+	type: ApartmentType,
+	roomType: string
 }
 
 export const Apartment: FC<ApartmentProps> = (props) => {
-	const {className = "", name, description, images, price, id, type} = props
+	const {className = "", name, description, images, price, id, type, roomType } = props
 
 	return (
 		<div className={classNames([s.apartment, className])}>

@@ -4,9 +4,9 @@ import "./dots.sass"
 import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
-import {Button} from "shared"
 import {Link} from "react-router-dom"
 import {Slider} from "shared/ui/slider/ui/Slider"
+import {ButtonTL} from "shared/ui/buttonTL/Button"
 
 export enum ApartmentType {
 	APARTMENT = "apartments",
@@ -42,12 +42,7 @@ export const Apartment: FC<ApartmentProps> = (props) => {
 				</div>
 				<div className={s.bottom}>
 					<div className={s.price}>От {price}р <br/> за ночь</div>
-					<a href='#' data-tl-booking-open='true' data-tl-room={roomType}>
-						<Button text={"Бронировать"}/>
-					</a>
-					{/*<Link to={`/${type}/${id}`}>*/}
-					{/*	<Button text={"Бронировать"}/>*/}
-					{/*</Link>*/}
+					<ButtonTL text={"Бронировать"} roomType={+roomType}/>
 				</div>
 			</div>
 		</div>

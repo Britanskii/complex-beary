@@ -2,16 +2,15 @@
     height: fit-content
     position: relative
 
-
 .slick
     margin: 0 auto
     width: 500rem
     height: 335rem
 
 .image
-    height: 335rem
-    object-fit: contain
-
+    & > img
+        height: 335rem
+        object-fit: contain
 
 .default
     min-width: 680rem
@@ -20,6 +19,16 @@
     min-width: 565rem
     & > .slick
         width: 565rem
+
+.big
+    & > .slick
+        width: 1000rem
+        height: 600rem
+
+.bigImage
+    & > img
+        width: 1000rem
+        height: 600rem
 
 
 

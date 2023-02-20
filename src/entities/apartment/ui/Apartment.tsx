@@ -28,13 +28,13 @@ export const Apartment: FC<ApartmentProps> = (props) => {
 
 	return (
 		<div className={classNames([s.apartment, className])}>
-			<Slider images={images}/>
+			<Slider images={images.slice(0, 10)}/>
 			<div className={s.main}>
 				<div className={s.title}>{name}</div>
 				<div className={s.description}>
 					{description}
 					<Link to={`/${type}/${id}`} className={s.more}>
-						Подробнее
+						&#9660; Подробнее
 						<div className={s.arrow}/>
 					</Link>
 					<div className={s.line}/>

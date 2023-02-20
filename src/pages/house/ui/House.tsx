@@ -7,11 +7,12 @@ import {Wrapper} from "widgets"
 
 import close from "shared/assets/icons/close.svg"
 import {Slider, SliderVariants} from "shared/ui/slider/ui/Slider"
-import {Button, House as IHouse} from "shared"
+import { House as IHouse} from "shared"
 import {ImagesList} from "pages/house/ui/imagesList/ImagesList"
 import { useNavigate, useParams} from "react-router-dom"
 
 import {COTTAGES} from "shared"
+import {ButtonTL} from "shared/ui/buttonTL/Button"
 
 interface HouseProps {
     className?: string
@@ -22,7 +23,7 @@ export const House: FC<HouseProps> = (props) => {
 
 	const params = useParams()
 
-	const {name, images, video, description} = COTTAGES.find(({id}) => id === +params.id!) as IHouse
+	const {name, images, video, description, roomType} = COTTAGES.find(({id}) => id === +params.id!) as IHouse
 
 	const navigate = useNavigate()
 
@@ -41,7 +42,7 @@ export const House: FC<HouseProps> = (props) => {
 				<Slider images={images} variant={SliderVariants.CLEAR} settings={{dots: false}}/>
 				<div className={s.info}>
 					{description}
-					<Button className={s.book} text={"Бронировать"}/>
+					<ButtonTL roomType = {+roomType} className={s.book} text={"Бронировать"}/>
 				</div>
 			</div>
 			<ImagesList className={s.list} images={images}/>

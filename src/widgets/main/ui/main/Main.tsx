@@ -10,6 +10,8 @@ import winter from "../../assets/icons/winter.svg"
 import summer from "../../assets/icons/summer.svg"
 
 import {MainHeader} from "entities"
+import {SearchForm} from "entities/tlForms/tlFormInner/searchForm";
+import {SearchFormMain} from "entities/tlForms/tlFormMain/searchFormMain";
 
 interface MainProps {
     className?: string
@@ -43,7 +45,9 @@ export const Main: FC<MainProps> = (props) => {
 			<div className={s.subtitle}>
 				Широкий номерной фонд позволит выбрать подходящий вариант как для большой компании, так и уютный коттедж для семейной пары с детьми.
 			</div>
-			<div className={s.filter}/>
+			<div className={s.filter_}>
+				<SearchFormMain/>
+			</div>
 		</div>
 	)
 }

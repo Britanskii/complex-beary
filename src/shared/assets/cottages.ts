@@ -89,6 +89,7 @@ export interface House {
 	price: string
 	images: string[]
 	type: ApartmentType
+	roomType: string
 }
 
 export const COTTAGES: House[] = [
@@ -99,6 +100,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/-EqeL0Q4WMM",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
+		roomType: "217729",
 		images: [
 			aleha1,
 			aleha2,
@@ -121,6 +123,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/-EqeL0Q4WMM",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
+		roomType: "218593",
 		images: [
 			berendey1,
 			berendey2,
@@ -152,6 +155,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/rm4tlyvGsvU",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
+		roomType: "218594",
 		images: [
 			gorinich1,
 			gorinich2,
@@ -176,6 +180,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/-EqeL0Q4WMM",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
+		roomType: "217729",
 		images: [
 			aleha1,
 			aleha2,
@@ -198,6 +203,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/-EqeL0Q4WMM",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
+		roomType: "218593",
 		images: [
 			berendey1,
 			berendey2,
@@ -229,6 +235,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/rm4tlyvGsvU",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
+		roomType: "218594",
 		images: [
 			gorinich1,
 			gorinich2,
@@ -257,6 +264,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/8vaIjxLdwF0",
 		price: "5000",
 		type: ApartmentType.APARTMENT,
+		roomType: "220139,220136,218617,220135,220141",
 		images: [
 			seasons1,
 			seasons2,
@@ -280,6 +288,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/0ZBUCvElo10",
 		price: "5000",
 		type: ApartmentType.APARTMENT,
+		roomType: "218618,220170,220146,220168,220169",
 		images: [
 			frozen1,
 			frozen2,
@@ -310,6 +319,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/GuA_5IVN1kg",
 		price: "5000",
 		type: ApartmentType.APARTMENT,
+		roomType: "218619,220171,220172",
 		images: [
 			wizard1,
 			wizard2,

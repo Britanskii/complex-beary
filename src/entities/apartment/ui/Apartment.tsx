@@ -4,9 +4,9 @@ import "./dots.sass"
 import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
-import {Button} from "shared"
 import {Link} from "react-router-dom"
 import {Slider} from "shared/ui/slider/ui/Slider"
+import {ButtonTL} from "shared/ui/buttonTL/Button"
 
 export enum ApartmentType {
 	APARTMENT = "apartments",
@@ -17,14 +17,15 @@ interface ApartmentProps {
 	className?: string
 	name: string,
 	description: string,
-	price: string
+	price: string,
 	id: number,
 	images: string[],
-	type: ApartmentType
+	type: ApartmentType,
+	roomType: string
 }
 
 export const Apartment: FC<ApartmentProps> = (props) => {
-	const {className = "", name, description, images, price, id, type} = props
+	const {className = "", name, description, images, price, id, type, roomType } = props
 
 	return (
 		<div className={classNames([s.apartment, className])}>
@@ -41,9 +42,7 @@ export const Apartment: FC<ApartmentProps> = (props) => {
 				</div>
 				<div className={s.bottom}>
 					<div className={s.price}>От {price}р <br/> за ночь</div>
-					<Link to={`/${type}/${id}`}>
-						<Button text={"Бронировать"}/>
-					</Link>
+					<ButtonTL text={"Бронировать"} roomType={+roomType}/>
 				</div>
 			</div>
 		</div>

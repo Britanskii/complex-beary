@@ -432,7 +432,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/jQhiKQFd54M",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218595",
 		images: [
 			dobrinya1,
 			dobrinya2,
@@ -458,7 +458,7 @@ export const COTTAGES: House[] = [
 		video: "",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218596",
 		images: [
 			domovenok1,
 			domovenok2,
@@ -486,7 +486,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/3PfZ58o0_tQ",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218600,218856",
 		images: [
 			ivan1,
 			ivan2,
@@ -596,11 +596,13 @@ export const COTTAGES: House[] = [
 	{
 		id: 10,
 		name: "Забава",
-		description: "",
+		description: "Небольшой уютный, экологический коттедж ручной работы из карельской сосны, в сосновом бору на берегу Онежского озера. \n" +
+			"Гостиная совмещенная с кухней со всем необходимым для приготовления пищи, холодильник, микроволновая печь, электроплита, посуда на 4 персоны,   ЖК телевизор, WI-FI, спальня с двуспальной кроватью, диван, балкон-терраса. \n" +
+			"До Онежского озера 150 м.",
 		video: "https://www.youtube.com/embed/k7NIZSHl0Gs",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "220703",
 		images: [
 			zabava1,
 			zabava2,
@@ -620,7 +622,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/nWhbNwJJ9jo",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218598",
 		images: [
 			mumorets1,
 			mumorets2,
@@ -651,7 +653,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/4KtRhtaFdNc",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218603,218855",
 		images: [
 			lukomorie1,
 			lukomorie2,
@@ -687,7 +689,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/aVA-fIbwXrM",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218602",
 		images: [
 			lubava1,
 			lubava2,
@@ -716,7 +718,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/FTth7sXbgNw",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218605,218857",
 		images: [
 			mashaandbear1,
 			mashaandbear2,
@@ -742,7 +744,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/Fvq-VI11UlE",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218606",
 		images: [
 			mishutka1,
 			mishutka2,
@@ -766,7 +768,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/Gh5w9EyLIQU",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218607",
 		images: [
 			morozko1,
 			morozko2,
@@ -797,7 +799,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/OzhOdDpeUsI",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218608",
 		images: [
 			potapich1,
 			potapich2,
@@ -825,7 +827,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/GXzoUseU7WM",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218609",
 		images: [
 			skazka1,
 			skazka2,
@@ -874,7 +876,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/BPqYeDGRRFw",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218610",
 		images: [
 			teremok1,
 			teremok2,
@@ -899,7 +901,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/uVVh4ALGb-I",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218612",
 		images: [
 			toptigin1,
 			toptigin2,
@@ -926,7 +928,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/vfGctIjwotA",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218613,218852,218854",
 		images: [
 			bogatiri1,
 			bogatiri2,
@@ -954,7 +956,7 @@ export const COTTAGES: House[] = [
 		video: "https://www.youtube.com/embed/SA_fIwPKjkE",
 		price: "5000",
 		type: ApartmentType.COTTAGE,
-		roomType: "",
+		roomType: "218616",
 		images: [
 			medvedi1,
 			medvedi2,

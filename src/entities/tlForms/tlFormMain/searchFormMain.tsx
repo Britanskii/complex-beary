@@ -7,7 +7,7 @@ export const SearchFormMain = () => {
 		var q = [
 			['setContext', 'TL-INT-medvegka_2023-02-16.main', 'ru'],
 			['embed', 'search-form', {
-				container: 'tl-search-form'
+				container: 'tl-search-form-main'
 			}]
 		];
 		var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
@@ -47,7 +47,7 @@ export const SearchFormMain = () => {
 
 	return (
 		<div id='block-search-main'>
-			<div id='tl-search-form' className='tl-container'></div>
+			<div id='tl-search-form-main' className='tl-container'></div>
 		</div>
 	);
 }

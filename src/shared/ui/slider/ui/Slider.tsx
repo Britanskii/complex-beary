@@ -9,7 +9,8 @@ import {LazyImage} from "shared/lazyImage/ui/LazyImage"
 
 export enum SliderVariants {
 	DEFAULT = "default",
-	CLEAR = "clear"
+	CLEAR = "clear",
+	BIG = "big"
 }
 
 interface SliderProps {
@@ -39,6 +40,7 @@ const settings: Settings = {
 
 export const Slider: FC<SliderProps> = (props) => {
 	const {className = "", images, variant = SliderVariants.DEFAULT} = props
+	const imageBig = SliderVariants.BIG === variant
 
 	const refSlider = useRef(null)
 
@@ -55,11 +57,11 @@ export const Slider: FC<SliderProps> = (props) => {
 	}
 
 	return (
-		<div className={classNames([s.slider, className, s[variant]])}>
+		<div className={classNames([s.slider, s[variant], className])}>
 			<Arrow onClick={onNextRight} left={true}/>
 			<SlickSlider ref={refSlider} className={s.slick} {...settings} {...props.settings}>
 				{images.map((src) =>
-					<LazyImage className={s.image} key={src} src={src}/>
+					<LazyImage className={classNames([s.image], {[s.bigImage]: imageBig} )} key={src} src={src}/>
 				)}
 			</SlickSlider>
 			<Arrow onClick={onNextLeft} left={false}/>

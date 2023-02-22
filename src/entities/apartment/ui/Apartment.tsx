@@ -4,9 +4,9 @@ import "./dots.sass"
 import {FC} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
-import {Button} from "shared"
 import {Link} from "react-router-dom"
 import {Slider} from "shared/ui/slider/ui/Slider"
+import {ButtonTL} from "shared/ui/buttonTL/Button"
 
 export enum ApartmentType {
 	APARTMENT = "apartments",
@@ -29,25 +29,20 @@ export const Apartment: FC<ApartmentProps> = (props) => {
 
 	return (
 		<div className={classNames([s.apartment, className])}>
-			<Slider images={images}/>
+			<Slider images={images.slice(0, 10)}/>
 			<div className={s.main}>
 				<div className={s.title}>{name}</div>
 				<div className={s.description}>
 					{description}
 					<Link to={`/${type}/${id}`} className={s.more}>
-						Подробнее
+						&#9660; Подробнее
 						<div className={s.arrow}/>
 					</Link>
 					<div className={s.line}/>
 				</div>
 				<div className={s.bottom}>
 					<div className={s.price}>От {price}р <br/> за ночь</div>
-					<a href='#' data-tl-booking-open='true' data-tl-room={roomType}>
-						<Button text={"Бронировать"}/>
-					</a>
-					{/*<Link to={`/${type}/${id}`}>*/}
-					{/*	<Button text={"Бронировать"}/>*/}
-					{/*</Link>*/}
+					<ButtonTL text={"Бронировать"} roomType={+roomType}/>
 				</div>
 			</div>
 		</div>

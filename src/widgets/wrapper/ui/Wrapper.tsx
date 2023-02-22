@@ -7,7 +7,7 @@ import {Footer, HeaderTop} from "entities"
 import {HeaderType} from "entities/headerTop/HeaderTop"
 import {Menu} from "./menu/Menu"
 import {Breadcrumps} from "widgets/wrapper/ui/breadcrumps/Breadcrumps"
-import {SearchForm} from "entities/tlForms/tlFormInner/searchForm";
+import {SearchForm} from "entities/tlForms/tlFormInner/searchForm"
 
 interface MainProps {
     className?: string
@@ -22,7 +22,7 @@ export const Wrapper: FC<MainProps> = (props) => {
 			<Menu/>
 			<div className = {classNames([s.wrapper])}>
 				<HeaderTop type={HeaderType.DARK}/>
-				<div className={s.filter_}>
+				<div className={s.filter}>
 					<SearchForm/>
 				</div>
 				<Breadcrumps/>

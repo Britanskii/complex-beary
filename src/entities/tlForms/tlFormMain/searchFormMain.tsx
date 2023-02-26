@@ -4,10 +4,10 @@ import "./searchFormMain.css"
 export const SearchFormMain = () => {
 
 	const loadSearchForm = (w: any) => {
-		const q = [
-			["setContext", "TL-INT-medvegka_2023-02-16.main", "ru"],
-			["embed", "search-form", {
-				container: "tl-search-form"
+		var q = [
+			['setContext', 'TL-INT-medvegka_2023-02-16.main', 'ru'],
+			['embed', 'search-form', {
+				container: 'tl-search-form-main'
 			}]
 		]
 		const h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"]
@@ -47,7 +47,7 @@ export const SearchFormMain = () => {
 
 	return (
 		<div id='block-search-main'>
-			<div id='tl-search-form' className='tl-container'></div>
+			<div id='tl-search-form-main' className='tl-container'></div>
 		</div>
 	)
 }

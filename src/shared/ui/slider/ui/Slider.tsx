@@ -3,7 +3,7 @@ import s from "./slider.module.sass"
 import {FC, useRef} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
-import {Arrow} from "entities/apartment/ui/arrows/Arrow"
+import {Arrow} from "shared/ui/sliderNew/ui/arrows/Arrow"
 import {default as SlickSlider}  from "react-slick"
 import {LazyImage} from "shared/lazyImage/ui/LazyImage"
 

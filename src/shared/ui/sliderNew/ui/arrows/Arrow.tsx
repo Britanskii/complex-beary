@@ -2,7 +2,7 @@ import s from "./arrow.module.sass"
 
 import {FC} from "react"
 
-import arrow from "../resources/arrow.svg"
+import arrow from "../../../../../entities/apartment/ui/resources/arrow.svg"
 
 interface ArrowProps {
 	left: boolean

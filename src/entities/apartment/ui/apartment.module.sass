@@ -1,5 +1,6 @@
 .apartment
     justify-content: space-between
+    align-items: center
     color: var(--text-dark)
     display: flex
     min-height: 470rem
@@ -11,9 +12,14 @@
 .main
     width: 500rem
 
+.slider
+    margin-left: 80rem
+
 .title
     font: var(--font-regular-sb)
     font-weight: 600
+    &_mobile
+        display: none
 
 .description
     white-space: pre-line
@@ -41,3 +47,33 @@
 .price
     text-align: center
     font: var(--font-regular-sb-2)
+
+.information
+    width: 80%
+    display: none
+
+.buttons
+    display: flex
+    justify-content: space-between
+
+.text
+    display: flex
+    justify-content: space-between
+
+@media (max-width: 800px)
+    .slider
+        margin-left: initial
+    .apartment
+        padding: 10rem 0
+        flex-direction: column
+        min-height: 305rem
+    .title_mobile
+        font-size: 15rem
+        display: block
+    .main
+        display: none
+    .information_mobile
+        display: flex
+        flex-direction: column
+        gap: 10rem
+

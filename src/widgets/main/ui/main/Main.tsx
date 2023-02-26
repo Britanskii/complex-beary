@@ -10,8 +10,7 @@ import winter from "../../assets/icons/winter.svg"
 import summer from "../../assets/icons/summer.svg"
 
 import {MainHeader} from "entities"
-import {SearchForm} from "entities/tlForms/tlFormInner/searchForm";
-import {SearchFormMain} from "entities/tlForms/tlFormMain/searchFormMain";
+import {SearchFormMain} from "entities/tlForms/tlFormMain/searchFormMain"
 
 interface MainProps {
     className?: string

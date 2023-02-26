@@ -1,4 +1,4 @@
-import s from "./button.module.sass"
+import s from "../button/button.module.sass"
 
 import {FC} from "react"
 

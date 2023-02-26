@@ -6,13 +6,15 @@ import {classNames} from "shared/lib/classNames/classNames"
 import {Wrapper} from "widgets"
 
 import close from "shared/assets/icons/close.svg"
-import {Slider, SliderVariants} from "shared/ui/slider/ui/Slider"
+
 import { House as IHouse} from "shared"
 import {ImagesList} from "pages/house/ui/imagesList/ImagesList"
 import { useNavigate, useParams} from "react-router-dom"
 
 import {COTTAGES} from "shared"
 import {ButtonTL} from "shared/ui/buttonTL/Button"
+import {Slider} from "shared/ui/sliderNew/ui/Slider"
+import {SliderVariants} from "shared/ui/slider/ui/Slider"
 
 interface HouseProps {
     className?: string
@@ -39,7 +41,7 @@ export const House: FC<HouseProps> = (props) => {
 				</div>
 			</div>
 			<div className={s.main}>
-				<Slider images={images} variant={SliderVariants.CLEAR} settings={{dots: false}}/>
+				<Slider images={images} variant={SliderVariants.CLEAR}/>
 				<div className={s.info}>
 					{description}
 					<ButtonTL roomType = {+roomType} className={s.book} text={"Бронировать"}/>

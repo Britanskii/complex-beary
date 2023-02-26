@@ -1,0 +1,27 @@
+.dots
+    width: fit-content
+    display: flex
+    flex-wrap: wrap
+    gap: 15rem
+
+.point
+    transition: .3s background-color ease
+    width: 30rem
+    height: 30rem
+    background-color: var(--white)
+    border: 2rem solid var(--accent)
+    border-radius: 50%
+    cursor: pointer
+
+.active
+    background-color: var(--accent)
+
+@media (max-width: 800px)
+    .dots
+        gap: 5rem
+    .point
+        width: 10rem
+        height: 10rem
+        border: 1rem solid var(--accent)
+
+

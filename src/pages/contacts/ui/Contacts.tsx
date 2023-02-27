@@ -49,7 +49,7 @@ export const Contacts: FC<ContactsProps> = (props) => {
 			<div className={s.flex}>
 				<div className={s.info}>
 					<h3 className={s.name}>Гостевой комплекс Карелия Медвежка</h3>
-					<div>
+					<div className={s.links}>
 						+7 (921) 220 20 13 <br/>
 						8 (800) 201 29 03 (бесплатный звонок) <br/>
 						Email: 9212202013@mail.ru <br/>

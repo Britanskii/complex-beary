@@ -6,7 +6,7 @@ import {FC, useEffect, useState} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
 import {LazyImage} from "shared/lazyImage/ui/LazyImage"
-import {Slider, SliderVariants} from "shared/ui/slider/ui/Slider"
+import {Slider} from "shared/ui/sliderNew/ui/Slider"
 
 interface ImagesListProps {
 	className?: string
@@ -15,6 +15,7 @@ interface ImagesListProps {
 
 export const ImagesList: FC<ImagesListProps> = (props) => {
 	const [open, setOpen] = useState(false)
+	const [index, setIndex] = useState(0)
 	const {className = "", images} = props
 
 	const [currentImages, setCurrentImages] = useState<string[]>([])
@@ -26,26 +27,26 @@ export const ImagesList: FC<ImagesListProps> = (props) => {
 		setCurrentImages(shiftedImages)
 	}, [])
 
-	const onOpen = () => {
+	const onOpen = (index: number) => {
+		setIndex(index)
 		setOpen(true)
 	}
 
 	const onClose = () => {
-		console.log("anime")
 		setOpen(false)
 	}
 
 	return (
 		<>
 			<div className={classNames([s.imagesList, className])}>
-				{currentImages.map((src) =>
-					<LazyImage onClick={onOpen} className={s.image} key={src} src={src}/>
+				{currentImages.map((src, index) =>
+					<LazyImage onClick={() => onOpen(index)} className={s.image} key={src} src={src}/>
 				)}
 			</div>
 			{open &&
 				<div  onClick={onClose} className={s.slider}>
 					<div onClick={(event) => event.stopPropagation()}>
-						<Slider className={s.inner} variant={SliderVariants.BIG} images={images}/>
+						<Slider initialIndex={index} className={s.inner} images={images}/>
 					</div>
 					<img className={s.close} src={close} alt="Закрыть"/>
 				</div>

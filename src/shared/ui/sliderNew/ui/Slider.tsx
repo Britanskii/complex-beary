@@ -10,18 +10,18 @@ interface SliderProps {
     className?: string
 	images: string[]
 	variant?: SliderVariants
+	initialIndex?: number
 }
 
 export enum SliderVariants {
 	DEFAULT = "default",
 	CLEAR = "clear",
-	BIG = "big"
 }
 
 export const Slider: FC<SliderProps> = (props) => {
-	const {className = "", images, variant = SliderVariants.DEFAULT} = props
+	const {className = "", images, variant = SliderVariants.DEFAULT, initialIndex = 0} = props
 
-	const [index, setIndex] = useState(0)
+	const [index, setIndex] = useState(initialIndex)
 	const [width, setWidth] = useState(0)
 
 	const refLine = useRef(null)
@@ -32,6 +32,7 @@ export const Slider: FC<SliderProps> = (props) => {
 			const node = refWrapper.current as HTMLDivElement
 
 			setWidth(node.offsetWidth)
+			selectSlide(initialIndex)
 		}
 	}, [refWrapper, refWrapper.current])
 

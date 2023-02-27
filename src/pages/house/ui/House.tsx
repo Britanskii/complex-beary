@@ -13,8 +13,7 @@ import { useNavigate, useParams} from "react-router-dom"
 
 import {COTTAGES} from "shared"
 import {ButtonTL} from "shared/ui/buttonTL/Button"
-import {Slider} from "shared/ui/sliderNew/ui/Slider"
-import {SliderVariants} from "shared/ui/slider/ui/Slider"
+import {Slider, SliderVariants} from "shared/ui/sliderNew/ui/Slider"
 
 interface HouseProps {
     className?: string

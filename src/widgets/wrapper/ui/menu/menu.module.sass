@@ -1,5 +1,5 @@
 .menu
-    z-index: 2
+    z-index: 3
     transition: 0.3s right ease
     position: fixed
     right: -150%
@@ -57,3 +57,33 @@
     cursor: pointer
     width: 25rem
     align-self: self-start
+
+@media (max-width: 800px)
+    .menu
+        padding: 12rem 15rem
+    .row
+        &:not(:first-child)
+            font-size: 15rem
+    .logo
+        position: absolute
+        left: 12rem
+        width: 60rem
+        height: 60rem
+        margin: 0
+    .links
+        flex-direction: column
+        text-align: center
+        align-items: center
+        padding-bottom: 10rem
+    .close
+        position: absolute
+        right: 12rem
+        top: 15rem
+        width: 15rem
+        height: 15rem
+    .line
+        height: 1rem
+    .info
+        margin-top: 0
+        gap: 5rem
+        flex-direction: column

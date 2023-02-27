@@ -33,7 +33,7 @@ export const Slider: FC<SliderProps> = (props) => {
 
 			setWidth(node.offsetWidth)
 		}
-	}, [])
+	}, [refWrapper, refWrapper.current])
 
 	const selectSlide = (index: number) => {
 		let newIndex = index
@@ -71,7 +71,7 @@ export const Slider: FC<SliderProps> = (props) => {
 			<div ref={refWrapper} className = {s.wrapper}>
 				<div ref={refLine} className={s.line}>
 					{images.map((src, index) =>
-						<div key={index} className={s.item}>
+						<div style={{width: `${width}px`}} key={index} className={s.item}>
 							<img className={s.image} src={src}/>
 							<img className={s.background} src={src} key={index}/>
 						</div>

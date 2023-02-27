@@ -23,16 +23,21 @@
     display: flex
     justify-content: space-between
 
+.slider
+    width: 580rem
+    height: 400rem
+
 .info
     float: left
     font: var(--font-regular-s)
     position: relative
 
+.book
+    justify-content: space-between
+    display: flex
+
 .list
     margin-top: 15rem
-
-.book
-    float: right
 
 .excursion
     margin-top: 30rem
@@ -47,3 +52,31 @@
     margin-top: 10rem
     width: 700rem
     height: 425rem
+
+@media (max-width: 800px)
+    .excursion
+        margin-top: 15rem
+    .video
+        width: 100%
+        height: 175rem
+    .main
+        margin-top: 10rem
+        flex-direction: column-reverse
+    .book
+        flex-direction: column
+        a
+            align-self: center
+            width: fit-content
+    .info
+        font: var(--font-regular-m)
+    .back
+        font: var(--font-regular-m)
+    .title
+        font: var(--font-title-b)
+    .close
+        img
+            width: 10rem
+            height: 10rem
+    .slider
+        width: 100%
+        height: 200rem

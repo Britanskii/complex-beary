@@ -25,7 +25,7 @@ export const House: FC<HouseProps> = (props) => {
 
 	const params = useParams()
 
-	const {name, images, video, description, roomType} = COTTAGES.find(({id}) => id === +params.id!) as IHouse
+	const {name, images, video, description, roomType, lakeDistance} = COTTAGES.find(({id}) => id === +params.id!) as IHouse
 
 	const navigate = useNavigate()
 
@@ -41,10 +41,13 @@ export const House: FC<HouseProps> = (props) => {
 				</div>
 			</div>
 			<div className={s.main}>
-				<Slider images={images} variant={SliderVariants.CLEAR}/>
+				<Slider className={s.slider} images={images} variant={SliderVariants.CLEAR}/>
 				<div className={s.info}>
 					{description}
-					<ButtonTL roomType = {+roomType} className={s.book} text={"Бронировать"}/>
+					<div className={s.book}>
+						<span>До озера {lakeDistance} м.</span>
+						<ButtonTL roomType = {+roomType} text={"Бронировать"}/>
+					</div>
 				</div>
 			</div>
 			<ImagesList className={s.list} images={images}/>

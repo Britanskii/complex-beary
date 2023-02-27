@@ -5,6 +5,7 @@ import {FC, useEffect, useRef, useState} from "react"
 import {classNames} from "shared/lib/classNames/classNames"
 import {Arrow} from "shared/ui/sliderNew/ui/arrows/Arrow"
 import {Dots} from "shared/ui/sliderNew/ui/dots/Dots"
+import {useWindowDimension} from "shared"
 
 interface SliderProps {
     className?: string
@@ -27,14 +28,26 @@ export const Slider: FC<SliderProps> = (props) => {
 	const refLine = useRef(null)
 	const refWrapper = useRef(null)
 
+	const {width: windowWidth} = useWindowDimension()
+
+	const setNewWidth = () => {
+		const node = refWrapper.current! as HTMLDivElement
+
+		setWidth(node.offsetWidth)
+	}
+
 	useEffect(() => {
 		if (refWrapper && refWrapper.current) {
-			const node = refWrapper.current as HTMLDivElement
-
-			setWidth(node.offsetWidth)
+			setNewWidth()
 			selectSlide(initialIndex)
 		}
 	}, [refWrapper, refWrapper.current])
+
+	useEffect(() => {
+		if (refWrapper && refWrapper.current) {
+			setNewWidth()
+		}
+	}, [windowWidth])
 
 	const selectSlide = (index: number) => {
 		let newIndex = index

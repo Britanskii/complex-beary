@@ -11,3 +11,9 @@
 .tl-container {
     padding: 0 30px;
 }
+
+@media (max-width: 800px) {
+    #block-search-main {
+        margin: 15rem auto 0;
+    }
+}

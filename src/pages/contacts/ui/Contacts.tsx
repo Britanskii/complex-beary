@@ -1,8 +1,6 @@
 import s from "./contacts.module.sass"
 
-import map from "../assets/map.png"
-
-import {FC} from "react"
+import {FC, useEffect, useRef} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
 import {Socials} from "entities"
@@ -42,11 +40,30 @@ const come = [
 
 export const Contacts: FC<ContactsProps> = (props) => {
 	const {className = ""} = props
+	const refInfo = useRef<HTMLDivElement>(null)
+
+	useEffect(() => {
+		if (refInfo && refInfo.current) {
+			const script = document.createElement("script")
+			const div = document.createElement("div")
+			div.className = s.map
+
+			script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0cae2a4d10872e798b3d46f15db43ec5b32c0e40b8a3f99e7ec145af6ddd704c&amp;lang=ru_RU&amp;scroll=true&amp;"
+			script.async = true
+
+			div.appendChild(script)
+			refInfo.current.appendChild(div)
+
+			return () => {
+				refInfo.current!.removeChild(div)
+			}
+		}
+	}, [refInfo, refInfo.current])
 
 	return (
 		<Wrapper className = {classNames([s.contacts, className])}>
 			<h2 className={s.title}>Наши контакты:</h2>
-			<div className={s.flex}>
+			<div ref={refInfo} className={s.flex}>
 				<div className={s.info}>
 					<h3 className={s.name}>Гостевой комплекс Карелия Медвежка</h3>
 					<div className={s.links}>
@@ -58,7 +75,6 @@ export const Contacts: FC<ContactsProps> = (props) => {
 					</div>
 					<Socials/>
 				</div>
-				<img className={s.map} src={map} alt="Карта"/>
 			</div>
 			<h2 className={s.title}>Как добраться:</h2>
 			<div>

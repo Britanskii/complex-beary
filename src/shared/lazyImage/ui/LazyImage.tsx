@@ -13,7 +13,7 @@ export const LazyImage: FC<LazyImageProps> = (props) => {
 
 	return (
 		<div {...props} className={classNames([className])}>
-			<LazyLoadImage width="100%" height="auto" src={src} />
+			<LazyLoadImage effect="blur" width="100%" height="auto" src={src} />
 		</div>
 	)
 }

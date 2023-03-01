@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react"
 import tsconfigPaths from "vite-tsconfig-paths"
 
 export default defineConfig({
-	base: "https://britanskii.github.io/complex-beary/",
+	base: "http://testcpfv.beget.tech/",
 	plugins: [
 		react(), tsconfigPaths()
 	],

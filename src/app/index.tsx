@@ -23,7 +23,7 @@ const App = () => {
 				<Route path={"/"} element={
 					<>
 						<Cottages/>
-						<CottagesList type={ApartmentType.COTTAGE} list={COTTAGES} title={"Коттеджи"}/>
+						<CottagesList type={ApartmentType.COTTAGE} list={cottages} title={"Коттеджи"}/>
 					</>
 				}/>
 				<Route path={"/cottages"} element={

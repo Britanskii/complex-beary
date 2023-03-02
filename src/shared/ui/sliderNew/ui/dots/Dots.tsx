@@ -14,8 +14,6 @@ interface DotsProps {
 export const Dots: FC<DotsProps> = (props) => {
 	const {className = "", count, active, onClick} = props
 
-	console.log(active)
-
 	return (
 		<div className = {classNames([s.dots, className])}>
 			{count.map((value, index) =>{

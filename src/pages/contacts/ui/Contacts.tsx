@@ -53,9 +53,10 @@ export const Contacts: FC<ContactsProps> = (props) => {
 
 			div.appendChild(script)
 			refInfo.current.appendChild(div)
-
 			return () => {
-				refInfo.current!.removeChild(div)
+				if (refInfo && refInfo.current) {
+					refInfo.current.removeChild(div)
+				}
 			}
 		}
 	}, [refInfo, refInfo.current])

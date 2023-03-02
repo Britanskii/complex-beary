@@ -19,12 +19,10 @@ const App = () => {
 
 	return (
 		<div className={classNames(["app"])}>
+			<Cottages/>
 			<Routes>
 				<Route path={"/"} element={
-					<>
-						<Cottages/>
-						<CottagesList type={ApartmentType.COTTAGE} list={cottages} title={"Коттеджи"}/>
-					</>
+					<CottagesList type={ApartmentType.COTTAGE} list={cottages} title={"Коттеджи"}/>
 				}/>
 				<Route path={"/cottages"} element={
 					<CottagesList type={ApartmentType.COTTAGE} list={cottages} title={"Коттеджи"}/>

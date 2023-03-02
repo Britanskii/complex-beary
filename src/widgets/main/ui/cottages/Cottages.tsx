@@ -4,7 +4,7 @@ import {FC, useEffect, useState} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
 import {Main} from "widgets"
-import {useNavigate} from "react-router-dom"
+import {useLocation, useNavigate} from "react-router-dom"
 
 interface CottagesProps {
 	className?: string
@@ -15,17 +15,21 @@ export const Cottages: FC<CottagesProps> = (props) => {
 	const [open, setOpen] = useState(true)
 
 	const navigate = useNavigate()
+	const location = useLocation()
 
 	useEffect(() => {
 		const permitScroll = () => {
 			setScrollPermitted(true)
-			navigate("/cottages")
 		}
 
 		const preventScroll = (event: WheelEvent | TouchEvent) => {
 			if (!scrollPermitted) {
 				event.preventDefault()
 				setOpen(false)
+
+				if (location.pathname === "/" || location.pathname === "/complex-beary/") {
+					navigate("/cottages")
+				}
 				setTimeout(permitScroll, 600)
 			}
 		}
@@ -50,4 +54,5 @@ export const Cottages: FC<CottagesProps> = (props) => {
 			<Main/>
 		</div>
 	)
+
 }

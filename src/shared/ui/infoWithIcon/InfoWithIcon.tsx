@@ -1,6 +1,6 @@
 import s from "./infoWithIcon.module.sass"
 
-import {FC} from "react"
+import {FC, Fragment} from "react"
 
 import {classNames} from "shared/lib/classNames/classNames"
 
@@ -22,8 +22,8 @@ export const InfoWithIcon: FC<InfoWithIconProps> = (props) => {
 	return (
 		<div className={classNames([s.infoWithIcon, s[type], className])}>
 			<img className={s.icon} src={icon}/>
-			{text.map((line) =>
-				<>{line} <br/></>
+			{text.map((line, index) =>
+				<Fragment key={index}>{line} <br/></Fragment>
 			)}
 		</div>
 	)

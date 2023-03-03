@@ -27,7 +27,7 @@ export const HeaderTop: FC<HeaderTopProps> = (props) => {
 
 	return (
 		<div className={classNames([s.headerTop, s[type],className])}>
-			<Link to={"/"}><img className={s.logo} src={type === "DARK" ? logoWithout : logo} alt="logo"/></Link>
+			<Link to={"/cottages"}><img className={s.logo} src={type === "DARK" ? logoWithout : logo} alt="logo"/></Link>
 			<Address type={isDark}/>
 			<Number type={isDark}/>
 			<Navigation type={isDark}/>

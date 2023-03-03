@@ -25,8 +25,7 @@ export const Breadcrumps: FC<BreadcrumpsProps> = (props) => {
 
 	return (
 		<div className = {classNames([s.breadcrumps, className])}>
-			<NavLink to={"/"}>Главная</NavLink> /
-			<NavLink className={activeClass} to={"/cottages"}>коттеджи</NavLink> /
+			<NavLink className={activeClass} to={"/cottages"}>Коттеджи</NavLink> /
 			<NavLink className={activeClass} to={"/apartments"}>апартаменты</NavLink>
 			{isPromotions &&
                 <>

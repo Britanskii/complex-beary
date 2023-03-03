@@ -5,7 +5,6 @@ import {FC} from "react"
 import {classNames} from "shared/lib/classNames/classNames"
 import {Switcher} from "shared/ui/switcher/Switcher"
 import {HeaderTop} from "entities"
-import {HeaderType} from "entities/headerTop/HeaderTop"
 
 interface MainHeaderProps {
     className?: string
@@ -23,7 +22,7 @@ export const MainHeader: FC<MainHeaderProps> = (props) => {
 			<div className={s.flex}>
 				<Switcher onClick={toggleTheme} left={left} right={right}/>
 				<span className={s.money}>
-					от <span className={s.important}>5000</span> <br/>
+					от <span className={s.important}>3000</span> <br/>
 					руб  за ночь
 				</span>
 			</div>

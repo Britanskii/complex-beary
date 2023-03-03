@@ -18,7 +18,7 @@ export const Footer: FC<FooterProps> = (props) => {
 	return (
 		<div className={classNames([s.footer, className])}>
 			<div className={s.top}>
-				<Link className={s.logo} to={"/"}>
+				<Link className={s.logo} to={"/cottages"}>
 					<img className={s.logo} src={logo}/>
 				</Link>
 				<ul className={s.links}>

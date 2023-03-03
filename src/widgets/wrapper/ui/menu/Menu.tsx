@@ -22,7 +22,7 @@ export const Menu: FC<MenuProps> = (props) => {
 	return (
 		<div className = {classNames([s.menu, className], {[s.open]: open})}>
 			<div className={s.links}>
-				<Link to={"/"}>
+				<Link to={"/cottages"}>
 					<img className={s.logo} src={logo}/>
 				</Link>
 				<ul className={s.column}>

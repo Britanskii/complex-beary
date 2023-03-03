@@ -45,7 +45,7 @@ export const House: FC<HouseProps> = (props) => {
 					{description}
 					<div className={s.book}>
 						<span>До озера {lakeDistance} м.</span>
-						<ButtonTL roomType = {+roomType} text={"Бронировать"}/>
+						<ButtonTL className={s.button} roomType = {+roomType} text={"Бронировать"}/>
 					</div>
 				</div>
 			</div>
